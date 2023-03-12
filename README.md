@@ -1,2 +1,2 @@
-# plugin-rd-type-to-json-net
-Jetbrains Rider plugin introducing a type-to-json parsing feature as context menu action
+# .NET Type to JSON extension for JetBrains Rider
+ TypeToJson plugin introduces a new context menu action, which allows developers to quickly parse class/interface to JSON
