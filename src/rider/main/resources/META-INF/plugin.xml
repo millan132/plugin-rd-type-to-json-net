@@ -12,4 +12,10 @@
 ]]>
   </description>
 
+  <actions>
+    <action id="SerializeType" class="com.jetbrains.rider.plugins.typetojson.SerializeTypeAction">
+      <add-to-group group-id="EditorPopupMenu" />
+    </action>
+  </actions>
+  
 </idea-plugin>
