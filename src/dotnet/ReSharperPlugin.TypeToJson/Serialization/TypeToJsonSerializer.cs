@@ -32,7 +32,7 @@ public static class TypeToJsonSerializer
         nestedTypes.Push(clrTypeName);
         
         var properties = typeElement.Properties.ToList();
-        var flattenTypeInstance = new Dictionary<string, object>(properties.Count);
+        var pocoTypeInstance = new Dictionary<string, object>(properties.Count);
         
         foreach (var property in properties)
         {
@@ -46,12 +46,12 @@ public static class TypeToJsonSerializer
                 ? CreateInstanceAsPoco(propertyType, nestedTypes)
                 : GetInstanceOfValueType(propertyType);
 
-            flattenTypeInstance.Add(property.ShortName, propertyInstance);
+            pocoTypeInstance.Add(property.ShortName, propertyInstance);
         }
 
         nestedTypes.Pop();
         
-        return flattenTypeInstance;
+        return pocoTypeInstance;
     }
 
     private static object GetInstanceOfValueType(ITypeElement typeElement)
